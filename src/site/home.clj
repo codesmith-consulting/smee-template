@@ -1,7 +1,7 @@
 (ns site.home
-  (:require [coast]))
+  (:require [smee]))
 
 
 (defn index [request]
   [:h1 {:class "tc"}
-   "You're coasting on clojure!"])
+   "Clojure web apps made easy"])

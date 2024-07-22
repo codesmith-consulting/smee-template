@@ -1,12 +1,12 @@
 (ns server
-  (:require [coast]
+  (:require [smee]
             [routes])
   (:gen-class))
 
-(def app (coast/app {:routes routes/routes}))
+(def app (smee/app {:routes routes/routes}))
 
 (defn -main [& [port]]
-  (coast/server app {:port port}))
+  (smee/server app {:port port}))
 
 (comment
   (-main))

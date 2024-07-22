@@ -1,13 +1,13 @@
 (ns components
-  (:require [coast]))
+  (:require [smee]))
 
 
 (defn layout [request body]
   [:html
     [:head
      [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
-     (coast/css "bundle.css")
-     (coast/js "bundle.js")]
+     (smee/css "bundle.css")
+     (smee/js "bundle.js")]
     [:body
      body]])
 
@@ -21,7 +21,7 @@
   ([am m s]
    (let [data (select-keys m [:data-confirm])
          form (select-keys am [:action :_method :method :class])]
-     (coast/form (merge {:class "dib ma0"} form)
+     (smee/form (merge {:class "dib ma0"} form)
        [:input (merge data {:class "input-reset pointer link underline bn f6 br2 ma0 pa0 dib blue bg-transparent"
                             :type "submit"
                             :value s})])))
@@ -89,7 +89,7 @@
   ([k m body]
    (form-for k m {} body))
   ([k m params body]
-   (coast/form-for k m (merge params {:class "pa4"})
+   (smee/form-for k m (merge params {:class "pa4"})
      [:div {:class "measure"}
       body])))
 
@@ -114,7 +114,7 @@
 
 (->> [:mr1 :mr2 :mr3 :mr4 :mr5]
      (mapv name)
-     (mapv #(coast/intern-var % (el :span {:class %}))))
+     (mapv #(smee/intern-var % (el :span {:class %}))))
 
 
 (defn tc [& body]

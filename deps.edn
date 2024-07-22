@@ -1,9 +1,10 @@
 {:paths ["db" "resources" "src"]
 
  :deps
- {org.clojure/clojure         {:mvn/version "1.11.3"}
-  coast-framework/coast.theta {:mvn/version "1.6.0"}
-  org.xerial/sqlite-jdbc      {:mvn/version "3.46.0.0"}}
+ {org.clojure/clojure            {:mvn/version "1.11.3"}
+  org.xerial/sqlite-jdbc         {:mvn/version "3.46.0.0"}
+  co.uk.codesmithconsulting/smee {:git/url "https://github.com/codesmith-consulting/smee.git"
+                                  :sha      "da33ef09eba3afe889908f267c39fc61e2725368"}}
 
  :aliases
  {:test

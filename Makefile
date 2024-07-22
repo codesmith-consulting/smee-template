@@ -1,7 +1,7 @@
 .PHONY: test
 
 test:
-	COAST_ENV=test clj -M:test
+	SMEE_ENV=test clj -M:test
 
 clean:
 	rm -rf target/*

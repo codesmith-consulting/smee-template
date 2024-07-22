@@ -1,14 +1,14 @@
 (ns routes
-  (:require [coast]
+  (:require [smee]
             [components]))
 
 (def routes
-  (coast/routes
+  (smee/routes
 
-    (coast/site
-      (coast/with-layout components/layout
+    (smee/site
+      (smee/with-layout components/layout
         [:get "/" :site.home/index]))
 
-    (coast/api
-      (coast/with-prefix "/api"
+    (smee/api
+      (smee/with-prefix "/api"
         [:get "/" :api.home/index]))))
