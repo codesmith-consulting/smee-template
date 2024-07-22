@@ -1,31 +1,31 @@
 .PHONY: test
 
 test:
-	COAST_ENV=test clj -A\:test
+	COAST_ENV=test clj -M:test
 
 clean:
 	rm -rf target/*
 
 uberjar:
-	clj -A\:uberjar
+	clj -M:uberjar
 
 repl:
-	clj -R:repl bin/repl.clj
+	clj -M:repl bin/repl.clj
 
 assets:
-	clj -m coast.assets
+	clj -M -m coast.assets
 
 server:
-	clj -m server
+	clj -M -m server
 
 db/migrate:
-	clj -m coast.migrations migrate
+	clj -M -m coast.migrations migrate
 
 db/rollback:
-	clj -m coast.migrations rollback
+	clj -M -m coast.migrations rollback
 
 db/create:
-	clj -m coast.db create
+	clj -M -m coast.db create
 
 db/drop:
-	clj -m coast.db drop
+	clj -M -m coast.db drop
