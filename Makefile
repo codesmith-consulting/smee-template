@@ -7,7 +7,7 @@ clean:
 	rm -rf target/*
 
 uberjar:
-	clj -M:uberjar
+	clj -T:build uberjar
 
 repl:
 	clj -M:repl bin/repl.clj
