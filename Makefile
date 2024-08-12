@@ -13,19 +13,19 @@ repl:
 	clj -M:repl bin/repl.clj
 
 assets:
-	clj -M -m coast.assets
+	clj -M -m smee.assets
 
 server:
 	clj -M -m server
 
 db/migrate:
-	clj -M -m coast.migrations migrate
+	clj -M -m smee.migrations migrate
 
 db/rollback:
-	clj -M -m coast.migrations rollback
+	clj -M -m smee.migrations rollback
 
 db/create:
-	clj -M -m coast.db create
+	clj -M -m smee.db create
 
 db/drop:
-	clj -M -m coast.db drop
+	clj -M -m smee.db drop

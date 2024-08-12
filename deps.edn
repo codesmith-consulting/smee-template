@@ -4,7 +4,7 @@
  {org.clojure/clojure            {:mvn/version "1.11.3"}
   org.xerial/sqlite-jdbc         {:mvn/version "3.46.0.0"}
   co.uk.codesmithconsulting/smee {:git/url "https://github.com/codesmith-consulting/smee.git"
-                                  :git/sha "d62fd05d3caf72861d16009e8e587e7bab8fb611"}}
+                                  :git/sha "3f0793b57af8737c5576068cf88a74bf9427cac0"}}
 
  :aliases
  {:test
